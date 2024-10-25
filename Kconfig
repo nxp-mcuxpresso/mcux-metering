@@ -1,0 +1,25 @@
+menu "Metering"
+    config MCUX_COMPONENT_middleware.metering.meterlib
+        bool "meterlib"
+        select MCUX_COMPONENT_middleware.metering.fraclib
+        help
+            Middleware metering meterlib.
+
+    config MCUX_COMPONENT_middleware.metering.meterliblp
+        bool "meterliblp"
+        select MCUX_COMPONENT_middleware.metering.fraclib
+        help
+            Middleware metering meterliblp.
+
+    config MCUX_COMPONENT_middleware.metering.meterfft
+        bool "meterfft"
+        select MCUX_COMPONENT_middleware.metering.fraclib
+        help
+            Middleware metering meterfft.
+
+    config MCUX_COMPONENT_middleware.metering.fraclib
+        bool "fraclib"
+        help
+            Middleware metering fraclib.
+
+endmenu
