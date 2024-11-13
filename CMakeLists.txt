@@ -1,5 +1,6 @@
 # meterlib
 if (CONFIG_MCUX_COMPONENT_middleware.metering.meterlib)
+	mcux_component_version(4.1.0)
 
     mcux_add_include(
         INCLUDES
@@ -33,7 +34,8 @@ endif()
 
 # meterliblp
 if (CONFIG_MCUX_COMPONENT_middleware.metering.meterliblp)
-
+	mcux_component_version(4.1.0)
+	
     mcux_add_include(
         INCLUDES
             meterliblp
@@ -66,7 +68,8 @@ endif()
 
 # meterfft
 if (CONFIG_MCUX_COMPONENT_middleware.metering.meterfft)
-
+	mcux_component_version(4.1.0)
+	
     mcux_add_include(
         INCLUDES
             meterlibFFT/inc
@@ -105,7 +108,8 @@ endif()
 
 # fraclib
 if (CONFIG_MCUX_COMPONENT_middleware.metering.fraclib)
-
+	mcux_component_version(4.1.0)
+	
     mcux_add_include(
         INCLUDES
             fraclib
