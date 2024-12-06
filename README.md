@@ -21,6 +21,8 @@ Documentation is based on application notes, that can be found:
 This repository is under **LA_OPT_Online Code Hosting NXP_Software_License**.
 
 ## Examples
+The examples are placed on the repository [mcux-sdk-examples](https://github.com/nxp-mcuxpresso/mcux-sdk-examples).
+The example list with description:
 - **meterlib1ph_test**
  - This example demonstrates use of the metering library in typical one-phase power meter application.
 
