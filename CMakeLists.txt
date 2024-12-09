@@ -352,16 +352,90 @@ endif()
 # fraclib (no MMAU)
 if (CONFIG_MCUX_COMPONENT_middleware.metering.fraclib_no_mmau)
 	mcux_component_version(4.1.0)
-	
+
     mcux_add_include(
         INCLUDES
             fraclib
             fraclib/inc
+    )
+
+    mcux_add_include(
+        INCLUDES fraclib/inc/cm0p
+		CORES cm0p
+    )
+
+    mcux_add_include(
+        INCLUDES fraclib/inc/cm4
+		CORES cm4
+    )
+	
+    mcux_add_include(
+        INCLUDES fraclib/inc/cm33
+		CORES cm33
     )
 	
     mcux_add_source(
         SOURCES
             fraclib/inc/fraclib.h
             fraclib/inc/types.h
+    )
+
+    mcux_add_source(
+        SOURCES
+			fraclib/inc/cm0p/fraclib_inlines.h
+			fraclib/inc/cm0p/fraclib_mul32.h
+		CORES cm0p
+    )
+	
+    mcux_add_source(
+        SOURCES fraclib/inc/cm4/fraclib_inlines.h
+		CORES cm4
+    )
+	
+    mcux_add_source(
+        SOURCES fraclib/inc/cm33/fraclib_inlines.h
+		CORES cm33
+    )
+
+    mcux_add_library(
+        LIBS fraclib/fraclib_cm0p_iar.a
+        TOOLCHAINS iar
+        CORES cm0p
+    )
+	
+    mcux_add_library(
+        LIBS fraclib/fraclib_cm0p_armcc.lib
+        TOOLCHAINS mdk
+        CORES cm0p
+    )
+
+    mcux_add_library(
+        LIBS fraclib/libfrac_cm0p_gcc.a
+        TOOLCHAINS armgcc mcux
+        CORES cm0p
+    )
+	
+    mcux_add_library(
+        LIBS fraclib/fraclib_cm4_iar.a
+        TOOLCHAINS iar
+        CORES cm4
+    )
+	
+    mcux_add_library(
+        LIBS fraclib/fraclib_cm4_armcc.lib
+        TOOLCHAINS mdk
+        CORES cm4
+    )
+
+    mcux_add_library(
+        LIBS fraclib/libfrac_cm4_gcc.a
+        TOOLCHAINS armgcc mcux
+        CORES cm4
+    )
+	
+    mcux_add_library(
+        LIBS fraclib/libfrac_cm33_gcc.a
+        TOOLCHAINS armgcc mcux
+        CORES cm33
     )
 endif()
