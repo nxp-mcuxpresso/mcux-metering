@@ -347,6 +347,12 @@ if (CONFIG_MCUX_COMPONENT_middleware.metering.meterfft_no_mmau)
         TOOLCHAINS armgcc mcux
         CORES cm33
     )
+	
+    mcux_add_library(
+        LIBS meterlibFFT/libmeterFFT_cm33_iar.a
+        TOOLCHAINS iar
+        CORES cm33
+    )
 endif()
 
 # fraclib (no MMAU)
@@ -436,6 +442,12 @@ if (CONFIG_MCUX_COMPONENT_middleware.metering.fraclib_no_mmau)
     mcux_add_library(
         LIBS fraclib/libfrac_cm33_gcc.a
         TOOLCHAINS armgcc mcux
+        CORES cm33
+    )
+	
+    mcux_add_library(
+        LIBS fraclib/libfrac_cm33_iar.a
+        TOOLCHAINS iar
         CORES cm33
     )
 endif()
